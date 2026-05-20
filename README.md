@@ -10,4 +10,16 @@
 
 ## Instalar dependências:
 
+- Criar o venv:
+
+´´´
+python3 -m venv venv
+´´´
+
+- Instalar as dependências:
+
+´´´
+pip install requirements.txt
+´´´
+
 ## Como rodar:
