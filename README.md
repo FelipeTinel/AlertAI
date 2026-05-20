@@ -12,14 +12,14 @@
 
 - Criar o venv:
 
-´´´bash
+```bash
 python3 -m venv venv
-´´´
+```
 
 - Instalar as dependências:
 
-´´´bash
+```bash
 pip install requirements.txt
-´´´
+```
 
 ## Como rodar:
