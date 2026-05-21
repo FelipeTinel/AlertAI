@@ -26,7 +26,7 @@ class AlertMessage:
             "titulo": "ALERTA MÁXIMO",
             "condicao": "Acima de 100 mm/h",
             "acao": "Fluxo emergencial ativo. Evite áreas de risco."
-}        }
+        }
     }
 
     @classmethod
