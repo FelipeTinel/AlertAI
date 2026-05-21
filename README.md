@@ -1,4 +1,4 @@
-# BaIAHackaton2026
+# AlertAI 🚨
 
 ## Membros:
  - Felipe Tinel
@@ -7,6 +7,7 @@
  - Lyd Azevedo
 
 ## Objetivo:
+
 
 ## Instalar dependências:
 
@@ -31,4 +32,6 @@ pip install -r requirements.txt
 python3 run.py
 ```
 
-- Veja os resultados pasta outputs/
+- Alerta de mensagem no número informado no terminal
+- Resultado das predições no /outputs
+- Simulador em tempo real do semáforo em função do risco calculado
