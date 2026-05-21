@@ -2,7 +2,7 @@
 
 # pipeline/risk_engine.py
 
-def classificar_forca_chuva(precipitacao_mm: float) -> dict:
+def storm_classification(precipitacao_mm: float) -> dict:
     """
     Classifica a força da chuva com base na precipitação em mm.
     
@@ -29,15 +29,15 @@ def classificar_forca_chuva(precipitacao_mm: float) -> dict:
     return {
         "precipitacao_mm": precipitacao_mm,
         "nivel": nivel,
-        "alerta": nivel in ("forte", "muito forte", "extrema")
+        "alerta": nivel in ('extremo', 'forte', 'moderado', 'fraco')
     }
 
 
-def calcular_risco(df):
+def risk_calculate(df):
     
     df = df.copy()
 
-    resultados = df['precipitacao'].apply(classificar_forca_chuva)
+    resultados = df['precipitacao'].apply(storm_classification)
     df['nivel']   = resultados.apply(lambda x: x['nivel'])
     df['alerta']  = resultados.apply(lambda x: x['alerta'])
 
