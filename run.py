@@ -1,5 +1,4 @@
 import pandas as pd
-import alerts
 import os
 import model
 from pipeline.risk_engine import risk_calculate
@@ -14,8 +13,21 @@ def run_pipeline():
     df = pd.read_csv(DATA)
 
     print('Generating predictions...')
-    
+    predicts = model.predict(df)
 
+    print('Calculating risk...')
+    risks = risk_calculate(predicts)
 
+    print ('Send alerts...')
+    for risk in risks:
+            if risk['nivel'] >= 'moderado':
+                send_alert(risk['nivel'])
 
+    print ('Saving outputs...')
+    df['predicts'] = predicts
+    df.to_csv('outputs/results.csv', index=False)
 
+    print ('Finished.')
+                
+if __name__ == '__main__':
+     run_pipeline()
