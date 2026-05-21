@@ -41,7 +41,7 @@ class AlertMessage:
             f"{config['emoji']} *{config['titulo']}*\n\n"
             f"⏰ *Período:* {periodo}\n"
             f"{'🚨' if nivel == 'critico' else '⛈️'} *Condição:* {config['condicao']}\n\n"
-            f"🚦 *Ação do Sistema:* {config['acao']}"
+            f"{config['acao']}"
         )
     
 # if __name__ == "__main__":
