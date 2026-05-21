@@ -2,28 +2,31 @@ class AlertMessage:
     _CONFIGS = {
         "normal": {
             "emoji": "⚪",
-            "titulo": "SITUAÇÃO NORMAL: FLUXO HABITUAL",
-            "condicao": "Chuva fraca ou ausente | Sem impactos",
-            "acao": "O sistema semafórico opera normalmente. Tenha uma boa viagem!"
+            "titulo": "TRÂNSITO NORMAL",
+            "condicao": "Até 25 mm/h",
+            "acao": "Sem alterações no trânsito."
         },
+
         "moderado": {
             "emoji": "🟢",
-            "titulo": "Aviso de Chuva: Trânsito Monitorado",
-            "condicao": "Chuva Moderada (25-50 mm/h)",
-            "acao": "Para ajudar no deslocamento, aumentamos em +20s o sinal verde nos pontos mais movimentados. Dirija com atenção e mantenha uma distância segura!"
+            "titulo": "CHUVA MODERADA",
+            "condicao": "25–50 mm/h",
+            "acao": "+20s no verde em vias principais. Dirija com atenção."
         },
+
         "forte": {
             "emoji": "🟡",
-            "titulo": "ATENÇÃO: ALTERAÇÃO EM ROTAS DE ESCAPE",
-            "condicao": "Chuva Forte (50-100 mm/h) | Risco de Retenção",
-            "acao": "Adicionados +40s de sinal verde e rotas de escape ativadas. Evite trechos alagados e planeje seu trajeto com antecedência."
+            "titulo": "CHUVA FORTE",
+            "condicao": "50–100 mm/h",
+            "acao": "+40s no verde e rotas de escape ativadas."
         },
+
         "extremo": {
             "emoji": "🔴",
-            "titulo": "ALERTA MÁXIMO: CONTROLE DE EMERGÊNCIA",
-            "condicao": "Chuva Extrema (>100 mm/h) | Alto Risco de Alagamento",
-            "acao": "Operação de escoamento máximo ativada. Rotas de risco foram BLOQUEADAS. Se puder, permaneça em local seguro e evite deslocamentos pela região."
-        }
+            "titulo": "ALERTA MÁXIMO",
+            "condicao": "Acima de 100 mm/h",
+            "acao": "Fluxo emergencial ativo. Evite áreas de risco."
+}        }
     }
 
     @classmethod
