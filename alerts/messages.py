@@ -3,7 +3,7 @@
 class AlertMessage:
 
     @staticmethod
-    def moderado(local, periodo):
+    def _moderado(local, periodo):
         return (
             f"🟡 *ATENÇÃO: CHUVA PREVISTA*\n\n"
             f"📍 *Local:* {local}\n"
@@ -13,7 +13,7 @@ class AlertMessage:
         )
 
     @staticmethod
-    def alto(local, periodo):
+    def _alto(local, periodo):
         return (
             f"🟠 *ALERTA: RISCO DE ALAGAMENTO*\n\n"
             f"📍 *Localidade:* {local}\n"
@@ -23,7 +23,7 @@ class AlertMessage:
         )
 
     @staticmethod
-    def critico(local):
+    def _critico(local, periodo):
         return (
             f"🔴 *EMERGÊNCIA: RISCO DE DESLIZAMENTO*\n\n"
             f"📍 *ÁREA AFETADA:* {local}\n"
