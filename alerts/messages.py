@@ -30,7 +30,7 @@ class AlertMessage:
     }
 
     @classmethod
-    def send_alert(cls, nivel, periodo):
+    def send_alert(cls, nivel, data):
         # Busca a config
         config = cls._CONFIGS.get(nivel.lower())
         
@@ -38,9 +38,10 @@ class AlertMessage:
             return "Nível de alerta inválido."
 
         return (
-            f"{config['emoji']} *{config['titulo']}*\n\n"
-            f"⏰ *Período:* {periodo}\n"
-            f"{'🚨' if nivel == 'critico' else '⛈️'} *Condição:* {config['condicao']}\n\n"
+            f"Bom Dia! 🚗💨\n\n"
+            f"{config['emoji']} *{config['titulo']} PREVISTA*\n\n"
+            f"⏰ *Data:* {data}\n"
+            f"{'🚨' if nivel == 'critico' else '⛈️'} *Condição:* {config['condicao']} (Milímetros por hora)\n\n"
             f"{config['acao']}"
         )
     
