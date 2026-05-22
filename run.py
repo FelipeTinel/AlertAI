@@ -36,4 +36,3 @@ def run_pipeline(date_str: str):
 if __name__ == '__main__':
     data = input('Digite uma data (ex: 2025-05-22):')
     run_pipeline('2025-05-22')
-
