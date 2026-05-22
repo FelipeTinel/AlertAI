@@ -216,13 +216,3 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-
-# Datasets
-data/*.csv
-
-# joblib
-
-model/artifacts/*.joblib
-# outputs
-
-output/*.csv
