@@ -24,4 +24,4 @@ def send_alert(level: str, date: str = 'date not defined'):
     print(f"  Alerta enviado [{level.upper()}]: {mensagem}")
     return message
 
-send_alert("moderado", "22/05/2026")
+# send_alert("moderado", "22/05/2026")

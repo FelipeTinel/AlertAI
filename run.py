@@ -16,15 +16,14 @@ def run_pipeline(date_str: str):
     LEVEL = ['fraco', 'moderado', 'forte', 'extremo']
     
     print('Sending alerts...')
-    
-    '''
-    Código de acionamento de alertas comentado para funcionamento do modelo preditivo.
-    
-    '''
 
-    # for _, risk in risks.iterrows():
-    #     if LEVEL.index(risk['nivel']) >= LEVEL.index('moderado'):
-    #         send_alert(risk['nivel'], date_str)
+    try:
+        for _, risk in risks.iterrows():
+            if LEVEL.index(risk['nivel']) >= LEVEL.index('moderado'):
+                send_alert(risk['nivel'], date_str)
+    except Exception as e:
+        print(f"[AVISO] Não foi possível enviar o WhatsApp: {e}")
+        print("[INFO] Certifique-se de configurar as credenciais do Twilio no arquivo .env")
 
 
     print('Running traffic_light simulation:')
